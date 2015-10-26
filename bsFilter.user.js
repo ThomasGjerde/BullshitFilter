@@ -26,7 +26,7 @@ if(location.hostname == "www.dagbladet.no"){
 for(var i = 0; i < elements.length; i++) {
 	elem = elements[i];
 	for(var j = 0; j < keywords.length; j++){
-		if(elem.innerHTML.indexOf(keywords[j]) > -1){
+		if(elem.innerHTML.toLowerCase().indexOf(keywords[j]) > -1){
 			garbage.push([elements[i],keywords[j]]);
 			break;
 		}  
