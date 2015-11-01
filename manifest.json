@@ -1,0 +1,21 @@
+{
+  "name" : "Bullshit filter",
+  "version" : "0.3",
+  "description" : "Filters bullshit",
+  "permissions": ["tabs"],
+  "background": {
+        "persistent": false,
+        "scripts": ["background.js"]
+    },
+  "content_scripts": [
+    {
+      "matches": ["http://www.vg.no/*","http://www.dagbladet.no/*"],
+      "js": ["bsFilter.user.js"]
+    }
+	],
+  "browser_action": {
+     "default_icon": "icon.png",
+	 "default_popup": "popup.html"
+  },
+  "manifest_version": 2
+}

@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Bullshit filter
-// @version      0.2
+// @version      0.3
 // @description  Userscript for filtering bullshit
 // @author       Thomas Gjerde
 // @match        http://www.dagbladet.no/
@@ -34,7 +34,10 @@ for(var i = 0; i < elements.length; i++) {
 }
 for(var i = 0; i < garbage.length; i++) {
     elem = garbage[i][0];
-    elem.innerHTML = "Redacted: " + garbage[i][1];
+    elem.innerHTML = "Filtered: " + garbage[i][1];
     //elem.parentNode.removeChild(elem);
 }
 console.log("Removed " + garbage.length + " bullshit element(s)");
+chrome.runtime.sendMessage({
+  total_elements: garbage.length
+});
