@@ -3,13 +3,14 @@
   "version" : "0.3",
   "description" : "Filters bullshit",
   "permissions": ["tabs"],
+  "icons": { "19": "icon.png" },
   "background": {
         "persistent": false,
         "scripts": ["background.js"]
     },
   "content_scripts": [
     {
-      "matches": ["http://www.vg.no/*","http://www.dagbladet.no/*"],
+      "matches": ["http://www.vg.no/","http://www.dagbladet.no/"],
       "js": ["bsFilter.user.js"]
     }
 	],
