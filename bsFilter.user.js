@@ -7,7 +7,7 @@
 // @match		 http://www.vg.no/
 // ==/UserScript==
 
-var keywords = ["farmen","reality-tv","dagbladet pluss","paradise","pluss.vg.no","minmote","bieber","rosablogg","sponset.vg.no","skal vi danse","/rampelys/"];
+var keywords = ["farmen","reality-tv","dagbladet pluss","paradise","pluss.vg.no","minmote","bieber","rosablogg","sponset.vg.no","skal vi danse","/rampelys/", "/kjendis/"];
 var garbage = [];
 var elements;
 if(location.hostname == "www.dagbladet.no"){
